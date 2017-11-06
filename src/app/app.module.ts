@@ -3,9 +3,7 @@ import { NgModule  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import { MatListModule, MatGridListModule, MatCardModule, MatToolbarModule, MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
-
 
 import { AppComponent } from './app.component';
 import { CardHeroComponent } from './components/card-hero/card-hero.component';
@@ -20,7 +18,7 @@ const MatModules = [
   MatButtonModule,
   MatToolbarModule,
   MatInputModule
-]
+];
 
 @NgModule({
   declarations: [
