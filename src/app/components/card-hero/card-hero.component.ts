@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { Hero} from '../../app.component';
+import { Component , Input} from '@angular/core';
+import { HeroesService } from '../../services/heroes.service';
+
+import { Hero } from '../../hero';
+
+
 
 @Component({
   selector: 'app-card-hero',
@@ -8,9 +12,10 @@ import { Hero} from '../../app.component';
 })
 
 export class CardHeroComponent {
-  title = 'Tour of Heroes';
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
+  title: string;
+  @Input() hero: Hero;
+
+  constructor (private heroesService: HeroesService) {
+    this.title = 'Detail of Hero';
+  }
 }

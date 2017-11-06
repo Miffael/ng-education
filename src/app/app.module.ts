@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,  } from '@angular/core';
+import { NgModule  } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -9,7 +9,8 @@ import { MatListModule, MatGridListModule, MatCardModule, MatToolbarModule, MatB
 
 import { AppComponent } from './app.component';
 import { CardHeroComponent } from './components/card-hero/card-hero.component';
-import { ListHeroComponent } from './components/list-hero/list-hero.component';
+
+import { HeroesService } from './services/heroes.service';
 
 const MatModules = [
   MatListModule,
@@ -25,7 +26,6 @@ const MatModules = [
   declarations: [
     AppComponent,
     CardHeroComponent,
-    ListHeroComponent,
   ],
   imports: [
     ...MatModules,
@@ -33,7 +33,7 @@ const MatModules = [
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
