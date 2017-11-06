@@ -11,4 +11,30 @@
   width: 100%;
 }
 
+.listItemContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.listText {
+  flex: 1 1 100%;
+}
+
+.listAction {
+  flex: 0 0 40px;
+}
+
+.id {
+  font-size: 12px;
+  margin: 0 10px 0 0;
+}
+
+.mat-list-item {
+  transition: 0.4 background-color;
+}
+
+.selected {
+  background-color: rgba(0,0,0,0.05);
+}
 
