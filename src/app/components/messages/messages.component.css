@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.row .text {
+  flex: 1 1 100%;
+}
+
+.row .actions {
+  flex: 0 1 100px;
+  text-align: right;
+}
