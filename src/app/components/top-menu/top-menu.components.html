@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <div class="line">
+    <div class="navList">
+      <div class="navListItem" *ngFor="let link of links" [class.selected]=" link.url === router.url">
+        <a routerLink="{{link.url}}">{{link.name}}</a>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
