@@ -1,0 +1,16 @@
+<div class="dashboard">
+  <h3 class="title">Dashboard</h3>
+  <p></p>
+  <mat-grid-list cols="2" rowHeight="2:1" gutterSize="15px">
+    <mat-grid-tile *ngFor="let hero of heroes">
+      <a [routerLink]="['/detail', hero.id]">
+        <mat-card>
+          <mat-card-content>
+            <span class="name">{{hero.name}}</span>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+

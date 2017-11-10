@@ -8,4 +8,10 @@ body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
 body {
   font-family: 'Roboto', sans-serif;
   background: #fafafa;
+  min-height: 100vh;
+}
+
+.mainTail {
+  margin: 15px auto;
+  max-width: 550px;
 }

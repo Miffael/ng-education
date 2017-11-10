@@ -1,0 +1,30 @@
+.line {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.title {
+  flex: 0 1 150px;
+  padding: 0 10px;
+}
+
+.navList {
+  flex: 1 1 100%;
+  display: flex;
+}
+
+.navListItem {
+  flex: 1 1 0;
+  padding: 0 10px;
+}
+
+.navListItem a {
+  color: rgba(255, 255, 255, .87);
+  text-decoration: none;
+
+}
+
+.navListItem.selected a {
+  color: #f44336;
+}
