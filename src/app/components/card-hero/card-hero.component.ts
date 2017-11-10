@@ -28,6 +28,11 @@ export class CardHeroComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.heroesService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
 

@@ -9,9 +9,15 @@ body {
   font-family: 'Roboto', sans-serif;
   background: #fafafa;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .mainTail {
   margin: 15px auto;
   max-width: 550px;
+}
+
+.mat-input-placeholder .material-icons {
+  font-size: 18px;
+  vertical-align: middle;
 }

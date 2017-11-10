@@ -14,7 +14,7 @@
 }
 
 .listAction {
-  flex: 0 0 40px;
+  flex: 0 0 90px;
 }
 
 .id {
@@ -30,3 +30,30 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  margin: 0 -5px;
+}
+
+.row .fieldCell,
+.row .actionCell {
+  padding: 0 5px;
+}
+
+.row .fieldCell {
+  flex: 1 1 100%;
+}
+
+.row .fieldCell input,
+.row .fieldCell .mat-input-container {
+  width: 100%;
+}
+
+.row .fieldCell .actionCell {
+  flex: 0 0 90px;
+}
+
+.row .fieldCell .actionCell button {
+  width: 100%;
+}

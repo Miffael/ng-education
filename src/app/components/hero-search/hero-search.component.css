@@ -1,0 +1,23 @@
+.list a {
+  color: rgba(0, 0, 0, .87);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row .text {
+  flex: 1 1 100%;
+}
+
+.row .action {
+  flex: 0 0 25px;
+}
+
+
