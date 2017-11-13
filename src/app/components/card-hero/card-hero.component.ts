@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
 import {HeroesService} from '../../services/heroes.service';
@@ -28,15 +28,17 @@ export class CardHeroComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.heroesService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
+  }
+
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    console.log(this.heroesService.getHero(id));
 
     this.heroesService.getHero(id)
-      .then((hero) => {
+      .subscribe((hero) => {
         this.hero = hero;
-        console.log(this.hero);
       });
 
   }

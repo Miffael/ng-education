@@ -1,0 +1,31 @@
+<div class="mainTail">
+  <mat-card>
+    <mat-card-header>
+      <p class="title">Search Hero</p>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="field">
+        <mat-form-field>
+          <input #searchField matInput id="search-field" (keyup)="search(searchField.value)">
+          <mat-placeholder><span class="material-icons">search</span> Name</mat-placeholder>
+        </mat-form-field>
+      </div>
+      <div class="list">
+        <mat-list>
+          <mat-list-item *ngFor="let hero of heroes$ | async">
+            <a routerLink="/detail/{{hero.id}}">
+              <span class="row">
+                <span class="text">
+                  <span>{{hero.name}}</span>
+                </span>
+                <span class="action" mat-icon-button>
+                    <span class="material-icons">edit</span>
+                </span>
+              </span>
+            </a>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

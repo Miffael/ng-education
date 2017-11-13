@@ -23,12 +23,29 @@ export class ListHeroesComponent implements OnInit {
     };
   }
 
-  getHeroues(): void {
-    this.heroesServices.getHeroues().then(heroes => this.heroes = heroes);
+  getHeroes(): void {
+    this.heroesServices.getHeroues().subscribe(heroes => this.heroes = heroes);
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (name) {
+      this.heroesServices.addHero({name} as Hero)
+        .subscribe(hero => {
+          this.heroes.push(hero);
+        });
+    }
+    this.heroesServices.getHeroues().subscribe(heroes => console.log(heroes));
+  }
+
+  delete(hero: Hero): void {
+    this.heroesServices.deleteHero(hero).subscribe(
+      _ => this.heroes = this.heroes.filter(h => h !== hero)
+    );
   }
 
   ngOnInit(): void {
-    this.getHeroues();
+    this.getHeroes();
   }
 
 }

@@ -18,7 +18,15 @@
       </form>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+      <div class="actionRow">
+        <div class="btnWrap">
+          <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+        </div>
+        <div class="spacer"></div>
+        <div class="btnWrap">
+          <button mat-raised-button color="primary" (click)="save()">Save</button>
+        </div>
+      </div>
     </mat-card-actions>
   </mat-card>
 </div>
