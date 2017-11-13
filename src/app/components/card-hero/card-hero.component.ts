@@ -29,12 +29,10 @@ export class CardHeroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-
+    const id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.heroesService.getHero(id)
       .subscribe((hero) => {
         this.hero = hero;
       });
-
   }
 }
