@@ -35,12 +35,10 @@ export class ListHeroesComponent implements OnInit {
           this.heroes.push(hero);
         });
     }
-
     this.heroesServices.getHeroues().subscribe(heroes => console.log(heroes));
   }
 
   delete(hero: Hero): void {
-
     this.heroesServices.deleteHero(hero).subscribe(
       _ => this.heroes = this.heroes.filter(h => h !== hero)
     );
