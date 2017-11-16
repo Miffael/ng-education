@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
 import {HeroesService} from '../../services/heroes.service';
@@ -29,15 +29,10 @@ export class CardHeroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    console.log(this.heroesService.getHero(id));
-
+    const id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.heroesService.getHero(id)
-      .then((hero) => {
+      .subscribe((hero) => {
         this.hero = hero;
-        console.log(this.hero);
       });
-
   }
 }

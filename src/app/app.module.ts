@@ -20,8 +20,11 @@ import { TopMenuComponents } from './components/top-menu/top-menu.components';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CardHeroComponent } from './components/card-hero/card-hero.component';
 import { ListHeroesComponent } from './components/list-heroes/list-heroes.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 import { HeroesService } from './services/heroes.service';
+import { MessageService } from './services/message.service';
+
 
 const MatModules = [
   MatListModule,
@@ -41,6 +44,7 @@ const MatModules = [
     DashboardComponent,
     CardHeroComponent,
     ListHeroesComponent,
+    MessagesComponent,
   ],
   imports: [
     ...MatModules,
@@ -49,7 +53,7 @@ const MatModules = [
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [HeroesService],
+  providers: [HeroesService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
